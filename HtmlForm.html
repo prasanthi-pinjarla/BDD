@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Page Factory</title>
+
+<style type="text/css">
+.btn{
+
+	padding: 5px 10px 5px 10px;
+	background-color: red;
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+</style>
+<script type="text/javascript">
+function chkEmpty(){
+var email=/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
+var mob=/^[7-9]{1}[0-9]{9}$/;
+
+
+if (document.formK.txtName.value == "") {alert("Please fill the Name");}
+else if(document.formK.txtMail.value=="") {alert("Please fill the Email");}
+else if(email.test(formK.txtMail.value)==false) {alert("Please fill the valid Email");}
+else if(document.formK.txtMobile.value=="") {alert("Please fill the mobile number");}
+else if(mob.test(formK.txtMobile.value)==false) {alert("Please fill the valid mobile number");}
+else if((formK.gender[0].checked == false) && (formK.gender[1].checked == false)) {alert("Please select gender");}
+else if (document.formK.city.value=="Select City"){alert("Please select city")}
+
+else if(formK.address.value=="") {alert("Please fill the address");}
+}
+</script>
+</head
+<body>
+	<div style="width: 700px;margin-left: 200px;">
+<h2 style="color:red; font-style: italic;">Page Factory</h2>
+<hr>
+<div style=" border-radius: 15px;      padding: 20px;    width: 400px;     box-shadow:5px 5px 5px 5px red;">
+
+	<form name="formK">
+		<table>
+			<tr>
+				<td>Name :</td>
+				<td><input type="text" name="name" id="txtName" required /></td>
+			</tr>
+			<tr></tr>
+			<tr>
+				<td>Email Id :</td>
+				<td><input type="email" name="email" id = "txtMail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" /></td>
+			</tr>
+			<tr></tr>
+			<tr>
+				<td>Mobile No. :</td>
+				<td><input type="text" name="mobile" id ="txtMobile"  pattern="[7-9]{1}[0-9]{9}$" /></td>
+
+			</tr>
+			<tr></tr>
+			<tr>
+				<td>Gender :</td>
+				<td><input type="radio" id="M" value="Male" name="gender" >Male &nbsp &nbsp
+					<input type="radio" id="F" value="Female" name="gender" />Female <br /></td>
+					
+			</tr>
+			<tr></tr>
+			
+			<tr>
+	            <td align="left">City : </td>
+	            <td><select  name="city">
+					  <option value="Select City" selected>Select City</option>
+					  <option value="Pune">Pune</option>
+					  <option value="Bangalore">Bangalore</option>
+					  <option value="Chennai">Chennai</option>
+					  <option value="Hyderabad">Hyderabad</option>
+				</select></td>
+	        </tr>
+			<tr></tr>
+			<tr>
+				<td>Address :</td>
+				<td><textarea rows="4" cols="15" id ="addr" name="address"></textarea><br /></td>
+
+			</tr>
+			<tr></tr>
+			<tr>
+                <td colspan="2" align="right"> <br> 
+				<input type="submit" id ="btnSubmit" class="btn" value = "Sign up" onclick="chkEmpty()">
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </tr>
+           </table>
+</form>
+</div>
+
+</div>
+	   </body>
+</html>
